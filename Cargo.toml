@@ -1,0 +1,8 @@
+[package]
+name = "antisamples"
+version = "0.1.0"
+authors = ["Jim Blandy <jimb@red-bean.com>", "Jason Orendorff <jason.orendorff@gmail.com>"]
+
+[dev-dependencies]
+compiletest_rs = "0.0"
+
