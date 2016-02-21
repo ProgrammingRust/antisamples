@@ -8,4 +8,8 @@ fn compile_test() {
     config.mode = Mode::CompileFail;
     config.src_base = PathBuf::from("tests/compile-fail");
     compiletest::run_tests(&config);
+
+    config.mode = Mode::ParseFail;
+    config.src_base = PathBuf::from("tests/parse-fail");
+    compiletest::run_tests(&config);
 }
