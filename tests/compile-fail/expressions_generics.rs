@@ -27,7 +27,7 @@ mod space_invader_smiley {
         //~| HELP did you mean to write: `Vec { /* fields */ }`?
         //~| ERROR: unresolved name `i32`
         //~| HELP: run `rustc --explain E0425` to see a detailed explanation
-        //~| ERROR: attempted to take value of method `collect` on type `core::ops::Range<i32>`
+        //~| ERROR: attempted to take value of method `collect` on type `std::ops::Range<i32>`
         //~| HELP: maybe a `()` to call it is missing? If not, try an anonymous function
         //let ramp = (0 .. n).collect::<Vec<i32>>();  // ok, using ::<
         ramp

@@ -3,8 +3,7 @@
 // NOTE: The exact error message below appears in the book, so if the compiler
 // changes, we should update the book.
 //
-// error-pattern: the trait `core::fmt::Display` is not implemented for the type `<I as core::iter::Iterator>::Item`
-
+// error-pattern: the trait bound `<I as std::iter::Iterator>::Item: std::fmt::Display` is not satisfied
 
 /// Print out all the values produced by an iterator
 fn dump<I: Iterator>(iter: I) {
