@@ -1,4 +1,4 @@
-// error-pattern: cannot infer an appropriate lifetime for automatic coercion due to conflicting requirements
+// error-pattern: lifetime of reference outlines lifetime of borrowed content
 
 static mut STASH: &'static i32 = &128;
 fn f(p: &i32) { // still not good enough
