@@ -7,7 +7,8 @@ fn roughly_equal(a: f64, b: f64) -> bool {
 
 #[test]
 fn trig_works() {
-    assert!(roughly_equal(std::f64::consts::PI.cos(), -1.0));
+    use std::f64::consts::PI;
+    assert!(roughly_equal(PI.sin(), 0.0));
 }
 
 fn main() {
