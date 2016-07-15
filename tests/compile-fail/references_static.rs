@@ -1,4 +1,4 @@
-// error-pattern: lifetime of reference outlines lifetime of borrowed content
+// error-pattern: lifetime of reference outlives lifetime of borrowed content
 
 static mut STASH: &'static i32 = &128;
 fn f(p: &i32) { // still not good enough
@@ -6,8 +6,6 @@ fn f(p: &i32) { // still not good enough
         STASH = p;
     }
 }
-
-
 
 #[allow(dead_code)]
 mod alternate_wording {
