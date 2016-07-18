@@ -1,3 +1,6 @@
+// You can't just fire off a thread that operates on a data structure stored in
+// a local argument binding. That would be wildly unsafe.
+
 // error-pattern: closure may outlive the current function, but it borrows `stat`, which is owned by the current function
 
 struct City {

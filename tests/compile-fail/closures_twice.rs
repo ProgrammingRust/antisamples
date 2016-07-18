@@ -1,3 +1,5 @@
+// Closures that drop values do not implement a `Fn` trait.
+
 // error-pattern: expected a closure that implements the `Fn` trait, but this closure only implements `FnOnce`
 
 fn call_twice<F>(closure: F) where F: Fn () {

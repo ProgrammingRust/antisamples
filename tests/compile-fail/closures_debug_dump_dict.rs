@@ -1,3 +1,5 @@
+// Closures can move values.
+
 use std::collections::HashMap;
 
 fn produce_glossary() -> HashMap<String, String> {

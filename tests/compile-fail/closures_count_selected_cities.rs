@@ -1,3 +1,5 @@
+// Closures don't have function types.
+
 struct City {
     name: String,
     population: i64,

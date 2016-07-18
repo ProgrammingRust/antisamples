@@ -1,3 +1,5 @@
+// Structs are not ordered by default.
+
 // error-pattern: the trait bound `City: std::cmp::Ord` is not satisfied
 
 struct City {
