@@ -1,4 +1,4 @@
-// error-pattern: error: cannot use `v.1` because it was mutably borrowed
+// error-pattern: cannot use `v.1` because it was mutably borrowed
 
 fn main() {
     let mut v = (136, 139);
