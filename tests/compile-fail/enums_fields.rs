@@ -8,6 +8,6 @@ enum Shape {
 
 fn main() {
     let shape = Shape::Sphere { center: ORIGIN, radius: 1.0 };
-    let r = shape.radius;  // error: no field with that name
-    //~^ERROR: attempted access of field `radius` on type `Shape`, but no field with that name was found
+    let r = shape.radius;  // error: no field `radius` on type `Shape`
+    //~^ERROR: no field `radius` on type `Shape`
 }
