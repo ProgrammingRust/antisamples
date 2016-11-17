@@ -9,7 +9,7 @@ impl Process {
 }
 
 // The book claims that rustc flags this function with a particular error,
-// which is actually a little white lie:
+// which is actually untrue:
 fn wait_for_process(process: &mut Process) -> i32 {
     while true {
         if process.wait() {
@@ -17,8 +17,5 @@ fn wait_for_process(process: &mut Process) -> i32 {
         }
     }
 }  // error: not all control paths return a value
-
-// But the same program with one semicolon added *does* give that error message
-// (see expressions_while_true_2.rs)
 
 fn main() {}
