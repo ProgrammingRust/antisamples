@@ -38,7 +38,7 @@ fn process_files_in_parallel(filenames: Vec<String>,
 
     // Join: Wait for all threads to finish.
     for handle in thread_handles {
-        try!(handle.join().unwrap());
+        handle.join().unwrap()?;
     }
 
     Ok(())
