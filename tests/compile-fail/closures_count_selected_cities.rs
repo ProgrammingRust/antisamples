@@ -31,5 +31,4 @@ fn main() {
     //~| ERROR: mismatched types
     //~| NOTE: expected fn pointer, found closure
     //~| NOTE: expected type `fn(&City) -> bool`
-    //~| NOTE: found type `[closure
 }

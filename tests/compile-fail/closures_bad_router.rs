@@ -42,7 +42,6 @@ fn main() {
     //~^ERROR: mismatched types
     //~|NOTE: expected closure, found a different closure
     //~|NOTE: expected type
-    //~|NOTE: found type
     //~|NOTE: no two closures, even if identical, have the same type
     //~|HELP: consider boxing your closure and/or using it as a trait object
 }

@@ -1,6 +1,4 @@
 fn main() {
-    println!("{}", -100u32);  // error: unary negation of unsigned integer
-    //~^ ERROR: 2:20: 2:27: constant evaluation error [E0080]
-    //~| NOTE: in this expansion of println!
-    //~| NOTE: unary negation of unsigned integer
+    println!("{}", -100u32);  // error: can't apply unary `-` to type `u32`
+    //~^ ERROR: 2:20: 2:27: cannot apply unary operator `-` to type `u32`
 }

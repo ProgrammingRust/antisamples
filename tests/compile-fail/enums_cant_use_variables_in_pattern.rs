@@ -1,11 +1,12 @@
 // error-pattern: unreachable pattern
+#![deny(unreachable_patterns)]
 
 fn print_if_equal(x: i32, y: i32) {
     match x {
         y =>  // trying to match only if x == y
               // (it doesn't work: see explanation below)
             println!("{} == {}", x, y),
-        _ =>  // error: unreachable pattern
+        _ =>  // warning: unreachable pattern
             println!("not equal")
     }
 }

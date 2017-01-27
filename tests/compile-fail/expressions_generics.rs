@@ -8,7 +8,7 @@ mod space_invader_smiley {
         //~^ ERROR: chained comparison operators require parentheses
         //~| ERROR: expected value, found struct `Vec`
         //~| ERROR: expected value, found builtin type `i32`
-        //~| ERROR: unresolved function `with_capacity`
+        //~| ERROR: cannot find function `with_capacity`
         //~| ERROR: mismatched types
         //return Vec::<i32>::with_capacity(1000);  // ok, using ::<
     }

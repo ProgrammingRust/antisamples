@@ -6,8 +6,8 @@ mod proteins {
 
     mod synthesis {
         // proteins/synthesis.rs
-        pub fn synthesize(seq: &[AminoAcid])  // error: unresolved type `AminoAcid`
-        //~^ ERROR: unresolved type `AminoAcid`
+        pub fn synthesize(seq: &[AminoAcid])  // error: can't find type `AminoAcid`
+        //~^ ERROR: cannot find type `AminoAcid` in this scope
             -> Protein
         {
             Protein
