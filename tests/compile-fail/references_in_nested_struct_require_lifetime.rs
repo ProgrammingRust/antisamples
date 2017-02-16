@@ -1,4 +1,4 @@
-// error-pattern: wrong number of lifetime parameters: expected 1, found 0
+// error-pattern: expected lifetime parameter
 
 struct S<'a> {
     r: &'a i32
