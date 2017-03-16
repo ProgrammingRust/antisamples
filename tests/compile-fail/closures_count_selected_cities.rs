@@ -8,7 +8,13 @@ struct City {
 }
 
 fn main() {
+    struct Prefs;
+    impl Prefs {
+        fn acceptable_monster_risk(&self) -> f64 { 0.0 }
+    }
+
     let my_cities: Vec<City> = vec![];
+    let preferences = Prefs;
 
     /// Given a list of cities and a test function,
     /// return how many cities pass the test.
@@ -24,9 +30,10 @@ fn main() {
         count
     }
 
+    let limit = preferences.acceptable_monster_risk();
     let n = count_selected_cities(
         &my_cities,
-        |city| city.monster_attack_risk > 0.0);  // error: type mismatch
+        |city| city.monster_attack_risk > limit);  // error: type mismatch
     //~^ ERROR: the type of this value must be known in this context
     //~| ERROR: mismatched types
     //~| NOTE: expected fn pointer, found closure
