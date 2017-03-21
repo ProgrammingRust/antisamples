@@ -3,7 +3,7 @@
 // NOTE: The exact error message below appears in the book, so if the compiler
 // changes, we should update the book.
 //
-// error-pattern: the trait bound `<I as std::iter::Iterator>::Item: std::fmt::Display` is not satisfied
+// error-pattern: the trait bound `<I as std::iter::Iterator>::Item: std::fmt::Debug` is not satisfied
 
 /// Print out all the values produced by an iterator
 fn dump<I>(iter: I)
@@ -11,7 +11,7 @@ fn dump<I>(iter: I)
 {
     let mut index: usize = 0;
     for value in iter {
-        println!("{}: {}", index, value);   // error
+        println!("{}: {:?}", index, value);   // error
         index += 1;
     }
 }
