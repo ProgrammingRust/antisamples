@@ -5,7 +5,7 @@ fn main() {
     let m = &mut v;
     let m0 = &mut m.0;      // okay: reborrowing mutable from mutable
     *m0 = 137;
-    let r1 = &mut m.1;      // okay: reborrowing shared from mutable,
+    let r1 = &m.1;          // okay: reborrowing shared from mutable,
                             // and doesn't overlap with m0
     v.1;                    // error: access through other paths still forbidden
 }
