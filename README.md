@@ -9,10 +9,11 @@ The tests check that `rustc` agrees they are erroneous.
 They also help us notice when a new `rustc` version has different error messages,
 so we can update the book.
 
-We're publishing these so that even if you have a print copy of the book,
-you can still copy and paste our anti-examples into
+We're publishing these so that you can copy and paste our anti-examples into
 [play.rust-lang.org](https://play.rust-lang.org)
 and tinker with them.
+(You could also copy them out of the book,
+but often what's in the book is just a fragment, not a complete program.)
 
 Whenever you see a compiler error message in the book:
 
@@ -61,3 +62,23 @@ In this case, it's
 Happy hacking!
 
 —@jimblandy & @jorendorff
+
+
+## How to run<sup>*</sup> these tests
+
+<sup>*</sup>(of course they do not actually "run", as such)
+
+You probably don't care about this unless you're working on the book.
+These tests use the `compiletest_rs` crate, which requires Nightly Rust.
+To set up Nightly Rust:
+
+```console
+$ rustup install nightly
+$ rustup override set nightly
+```
+
+To run the tests:
+
+```console
+$ cargo test
+```
