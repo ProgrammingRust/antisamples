@@ -34,8 +34,7 @@ fn main() {
     let n = count_selected_cities(
         &my_cities,
         |city| city.monster_attack_risk > limit);  // error: type mismatch
-    //~^ ERROR: the type of this value must be known in this context
-    //~| ERROR: mismatched types
+    //~^ ERROR: mismatched types
     //~| NOTE: expected fn pointer, found closure
     //~| NOTE: expected type `fn(&City) -> bool`
 }
