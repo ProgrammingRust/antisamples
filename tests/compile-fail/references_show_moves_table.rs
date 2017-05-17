@@ -1,5 +1,8 @@
 // Passing a non-copyable data structure by value moves it.
 
+// error-pattern: use of moved value: `table`
+// error-pattern: move occurs because `table` has type `std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>`, which does not implement the `Copy` trait
+
 use std::collections::HashMap;
 
 type Table = HashMap<String, Vec<String>>;
@@ -27,6 +30,4 @@ fn main() {
 
     show(table);
     assert_eq!(table["Gesualdo"][0], "many madrigals");
-    //~^ ERROR: use of moved value: `table`
-    //~| NOTE: move occurs because `table` has type `std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>`, which does not implement the `Copy` trait
 }
