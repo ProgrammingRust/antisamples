@@ -2,7 +2,9 @@ struct File {
     descriptor: i32
 }
 
-fn new_file(d: i32) -> File { File { descriptor: d } }
+fn new_file(d: i32) -> File {
+    File { descriptor: d }
+}
 
 fn clone_from(this: &mut File, rhs: &File) {
     close(this.descriptor);
