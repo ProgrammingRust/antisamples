@@ -18,12 +18,14 @@ impl<T: Iterator> OffThreadExt for T
         // Move this iterator to a new worker thread and run it there.
         spawn(move || {
             //~^ ERROR: the trait bound `T: std::marker::Send` is not satisfied
-            //~| NOTE: the trait `std::marker::Send` is not implemented for `T`
+            //~| NOTE: `T` cannot be sent between threads safely
+            //~| HELP: the trait `std::marker::Send` is not implemented for `T`
             //~| HELP: consider adding a `where T: std::marker::Send` bound
             //~| NOTE: required because it appears within the type
             //~| NOTE: required by `std::thread::spawn`
             //~| ERROR: the trait bound `<T as std::iter::Iterator>::Item: std::marker::Send` is not satisfied
-            //~| NOTE: the trait `std::marker::Send` is not implemented for `<T as std::iter::Iterator>::Item`
+            //~| NOTE: `<T as std::iter::Iterator>::Item` cannot be sent between threads safely
+            //~| HELP: the trait `std::marker::Send` is not implemented for `<T as std::iter::Iterator>::Item`
             //~| HELP: consider adding a `where <T as std::iter::Iterator>::Item: std::marker::Send` bound
             //~| NOTE: required because of the requirements on the impl of `std::marker::Send` for `std::sync::mpsc::SyncSender<<T as std::iter::Iterator>::Item>`
             //~| NOTE: required because it appears within the type
