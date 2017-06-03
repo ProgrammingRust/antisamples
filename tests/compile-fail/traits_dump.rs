@@ -6,10 +6,8 @@
 fn dump<I>(iter: I)
     where I: Iterator
 {
-    let mut index: usize = 0;
-    for value in iter {
+    for (index, value) in iter.enumerate() {
         println!("{}: {:?}", index, value);   // error
-        index += 1;
     }
 }
 
