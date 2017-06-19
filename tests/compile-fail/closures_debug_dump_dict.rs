@@ -17,5 +17,4 @@ fn main() {
     debug_dump_dict();
     debug_dump_dict();
     //~^ ERROR: use of moved value: `debug_dump_dict`
-    //~| HELP: closure was moved because it only implements `FnOnce`
 }
