@@ -4,7 +4,7 @@ use std::path::PathBuf;
 use std::env;
 
 fn run_tests(mode: Mode, dir: &str) {
-    let mut config = compiletest::default_config();
+    let mut config = compiletest::Config::default();
     config.mode = mode;
     config.src_base = PathBuf::from(dir);
     if let Ok(name) = env::var::<&str>("TESTNAME") {

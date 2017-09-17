@@ -1,4 +1,4 @@
-// error-pattern: an extern crate named `std` has already been imported
+// error-pattern: the name `std` is defined multiple times
 extern crate std;
 
 fn main() {}

@@ -8,7 +8,6 @@ fn main() {
     //~^ ERROR: mismatched types
     //~| NOTE: expected trait std::io::Write, found struct `std::vec::Vec`
     //~| NOTE: expected type `std::io::Write`
-    //~| HELP: here are some functions which might fulfill your needs:
     //~| ERROR: the trait bound `std::io::Write: std::marker::Sized` is not satisfied
     //~| NOTE: `std::io::Write` does not have a constant size known at compile-time
     //~| HELP: the trait `std::marker::Sized` is not implemented for `std::io::Write`
