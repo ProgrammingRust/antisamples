@@ -1,6 +1,6 @@
 // `main()` can't use `?` because its return type is not `Result`.
 
-// error-pattern: the trait bound `(): std::ops::Try` is not satisfied
+// error-pattern: the `?` operator can only be used in a function that returns `Result`
 
 use std::io;
 

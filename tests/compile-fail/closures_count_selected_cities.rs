@@ -36,5 +36,5 @@ fn main() {
         |city| city.monster_attack_risk > limit);  // error: type mismatch
     //~^ ERROR: mismatched types
     //~| NOTE: expected fn pointer, found closure
-    //~| NOTE: expected type `fn(&City) -> bool`
+    //~| NOTE: expected type `for<'r> fn(&'r City) -> bool`
 }

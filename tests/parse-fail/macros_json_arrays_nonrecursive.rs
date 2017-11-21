@@ -27,7 +27,6 @@ fn main() {
         {
             "name": "Jim Blandy",
             //~^ ERROR: expected type, found `"Jim Blandy"`
-            //~| ERROR: expected type, found `"Jim Blandy"`
             "class_of": 1931,
             "major": "Tibetan throat singing"
         },
