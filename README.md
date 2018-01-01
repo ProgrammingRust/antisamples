@@ -82,3 +82,8 @@ To run the tests:
 ```console
 $ cargo test
 ```
+
+## License
+
+The example code in this directory and its subdirectories is licensed under the
+terms of the MIT license. See [LICENSE-MIT](LICENSE-MIT) for details.
