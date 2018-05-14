@@ -1,4 +1,4 @@
-// error-pattern: lifetime of reference outlives lifetime of borrowed content
+// error-pattern: explicit lifetime required in the type of `p`
 
 static mut STASH: &i32 = &128;
 fn f(p: &i32) { // still not good enough

@@ -5,5 +5,5 @@ fn main() {
 
     let _ =
         zero.abs();  // error: method `abs` not found
-    //~^ ERROR: no method named `abs` found for type `{integer}` in the current scope
+    //~^ ERROR: can't call method `abs` on ambiguous numeric type `{integer}`
 }

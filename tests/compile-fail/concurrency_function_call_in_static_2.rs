@@ -1,12 +1,13 @@
-// Function calls aren't allowed in static initialiers, take 2.
+// (Most) function calls aren't allowed in static initialiers, take 2.
 
-use std::sync::atomic::{AtomicUsize, Ordering};
+use std::sync::Mutex;
 
-static PACKETS_SERVED: AtomicUsize =
-    AtomicUsize::new(0);  // error: function call in static
-//~^ ERROR: `std::sync::atomic::AtomicUsize::new` is not yet stable as a const fn
-//~| HELP: in Nightly builds, add `#![feature(const_atomic_usize_new)]` to the crate attributes to enable
+static HOSTNAME: Mutex<String> =
+    Mutex::new(String::new());  // error: function call in static
+//~^ ERROR: calls in statics are limited to constant functions, struct and enum constructors
+//~| ERROR: calls in statics are limited to constant functions, struct and enum constructors
 
 fn main() {
-    assert_eq!(PACKETS_SERVED.load(Ordering::SeqCst), 0);
+    let guard = HOSTNAME.lock().unwrap();
+    assert_eq!(&*guard, "");
 }

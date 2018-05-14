@@ -1,4 +1,4 @@
-// error-pattern: cannot borrow immutable anonymous field `r.1` as mutable
+// error-pattern: cannot borrow field `r.1` of immutable binding as mutable
 
 fn main() {
     let mut w = (107, 109);

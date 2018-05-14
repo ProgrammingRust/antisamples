@@ -1,6 +1,6 @@
 // Non-`'static` references can't be shared across threads using `std::thread::spawn`.
 //
-// error-pattern: the type `[closure@tests/compile-fail/concurrency_spawn_lifetimes.rs:35:19: 35:60 worklist:std::vec::Vec<std::string::String>, glossary:&std::collections::BTreeMap<std::string::String, std::string::String>]` does not fulfill the required lifetime
+// error-pattern: explicit lifetime required in the type of `glossary`
 
 #![allow(dead_code)]
 
