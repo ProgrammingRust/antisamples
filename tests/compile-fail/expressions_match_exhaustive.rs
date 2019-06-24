@@ -23,7 +23,7 @@ fn main() {
         Jack => 10,
         Queen => 10,
         Ace => 11
-    };  // error: non-exhaustive patterns
+    };  // error: nonexhaustive patterns
     println!("{}", score);
 }
 

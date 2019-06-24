@@ -9,9 +9,9 @@ fn main() {
 
     let x = vec![10, 20, 30];
     if c {
-        f(x); // ... okay to move from x here
+        f(x); // ... ok to move from x here
     } else {
-        g(x); // ... and okay to also move from x here
+        g(x); // ... and ok to also move from x here
     }
     h(x) // bad: x is uninitialized here if either path uses it
     //~^ ERROR: use of moved value: `x`
