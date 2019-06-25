@@ -1,5 +1,5 @@
 // `Rc<String>` can't be shared across threads because it's not `Send`.
-// error-pattern: the trait bound `std::rc::Rc<std::string::String>: std::marker::Send` is not satisfied
+// error-pattern: `std::rc::Rc<std::string::String>` cannot be sent between threads safely
 
 use std::thread::spawn;
 use std::rc::Rc;
