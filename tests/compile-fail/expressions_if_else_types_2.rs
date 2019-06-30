@@ -7,8 +7,6 @@ fn main() {
     let best_sports_team =
         if is_hockey_season() { "Predators" };  // error
     //~^ ERROR: if may be missing an else clause
-    //~| NOTE: expected (), found &str
-    //~| NOTE: expected type `()`
 
     // (The last example is an error because in July,
     // the result would be `()`.)
