@@ -12,5 +12,5 @@ fn main() {
 
     // error: can't convert collection of Results to Vec<String>
     let lines: Vec<String> = reader.lines().collect();
-    //~^ ERROR: the trait bound `std::vec::Vec<std::string::String>: std::iter::FromIterator<std::result::Result<std::string::String, std::io::Error>>` is not satisfied
+    //~^ ERROR: a collection of type `std::vec::Vec<std::string::String>` cannot be built from an iterator over elements of type `std::result::Result<std::string::String, std::io::Error>`
 }
