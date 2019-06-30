@@ -10,6 +10,6 @@ fn main() {
     let u : Rc<String> = s.clone();
 
     s.push_str(" noodles");
-    //~^ ERROR: cannot borrow immutable borrowed content as mutable
+    //~^ ERROR: cannot borrow data in a `&` reference as mutable
 }
 

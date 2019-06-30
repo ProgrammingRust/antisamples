@@ -1,6 +1,6 @@
 // You can't move values out of a vector, slice, or array.
 
-// error-pattern: cannot move out of indexed content
+// error-pattern: cannot move out of index of `std::vec::Vec<std::string::String>`
 
 #[allow(unused_variables)]
 fn main() {

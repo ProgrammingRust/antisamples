@@ -8,7 +8,7 @@ fn main() {
 
     // You can't do this:
     let first_name = composers[0].name;
-    //~^ ERROR: cannot move out of indexed content
+    //~^ ERROR: cannot move out of index of `std::vec::Vec<main::Person>`
 
     let _ = first_name;
 }

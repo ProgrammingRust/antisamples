@@ -1,6 +1,6 @@
 // By default, struct and enum types are not copyable.
 
-// error-pattern: use of moved value: `l.number`
+// error-pattern: borrow of moved value: `l`
 
 fn main() {
     struct Label { number: u32 }
