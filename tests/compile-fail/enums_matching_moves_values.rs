@@ -1,5 +1,3 @@
-// error-pattern: use of partially moved value: `account`
-
 struct Account { name: String, language: String }
 struct UI;
 impl UI {
@@ -18,8 +16,13 @@ fn main() {
 
     match account {
         Account { name, language, .. } => {
+        //~^ NOTE: value moved here
             ui.greet(&name, &language);
-            ui.show_settings(&account);  // error: use of moved value `account`
+            ui.show_settings(&account);  // error: borrow of moved value: `account`
+                          // ^^^^^^^^ value borrowed here after partial move
+            //~^^ ERROR: borrow of moved value: `account`
+            //~| NOTE: value borrowed here after partial move
+            //~| NOTE: move occurs because `account.language` has type `std::string::String`, which does not implement the `Copy` trait
         }
     }
 }

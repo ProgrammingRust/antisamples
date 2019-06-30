@@ -1,6 +1,6 @@
 // The Rust compiler warns about unused `Result` values.
 
-// error-pattern: unused `std::result::Result` which must be used
+// error-pattern: unused `std::result::Result` that must be used
 
 use std::io::{Write, stderr};
 

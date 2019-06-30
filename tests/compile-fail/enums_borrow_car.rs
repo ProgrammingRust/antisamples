@@ -1,6 +1,6 @@
 // You can't borrow a car and then scrap it for parts.
 
-// error-pattern: cannot move out of borrowed content
+// error-pattern: cannot move out of a shared reference
 
 struct Engine {}
 

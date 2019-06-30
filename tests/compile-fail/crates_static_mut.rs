@@ -7,5 +7,5 @@ fn main() {
     static mut PACKETS_SERVED: usize = 0;
 
     println!("{} served", PACKETS_SERVED);  // error: use of mutable static
-    //~^ ERROR: use of mutable static requires unsafe function or block
+    //~^ ERROR: use of mutable static is unsafe and requires unsafe function or block
 }

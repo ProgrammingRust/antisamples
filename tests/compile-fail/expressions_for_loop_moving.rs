@@ -6,5 +6,5 @@ fn main() {
         println!("{}", s);
     }                                   // ...and dropped here
     println!("{} error(s)", strings.len()); // error: use of moved value
-    //~^ ERROR: use of moved value
+    //~^ ERROR: borrow of moved value: `strings`
 }
