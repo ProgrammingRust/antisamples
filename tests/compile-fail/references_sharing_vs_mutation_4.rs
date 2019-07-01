@@ -1,4 +1,4 @@
-// error-pattern: cannot borrow field `r.1` of immutable binding as mutable
+// error-pattern: cannot borrow `r.1` as mutable, as it is behind a `&` reference
 
 fn main() {
     let mut w = (107, 109);

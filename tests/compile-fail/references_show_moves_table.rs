@@ -1,6 +1,6 @@
 // Passing a non-copyable data structure by value moves it.
 
-// error-pattern: use of moved value: `table`
+// error-pattern: borrow of moved value: `table`
 // error-pattern: move occurs because `table` has type `std::collections::HashMap<std::string::String, std::vec::Vec<std::string::String>>`, which does not implement the `Copy` trait
 
 use std::collections::HashMap;
