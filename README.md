@@ -74,7 +74,6 @@ To set up Nightly Rust:
 
 ```console
 $ rustup install nightly
-$ rustup override set nightly
 ```
 
 To run the tests:
